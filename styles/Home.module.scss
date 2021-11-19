@@ -1,0 +1,14 @@
+.header {
+  height: 64px;
+  width: 100%;
+  background: $MAIN_COLOR;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  width: 100%;
+  padding: $GUTTER*2 $GUTTER/2 $GUTTER $GUTTER/2;
+}
