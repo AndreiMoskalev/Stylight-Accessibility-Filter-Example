@@ -2,6 +2,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 
 import Catalog from '../components/Catalog';
+import Dropbox from '../components/Dropbox';
 import productsMock from '../constants/items.json';
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
         <Image src="/stylight.svg" width={100} height={64} />
       </header>
       <section className={styles.section}>
-        SECTION ONE
+        <Dropbox />
       </section>
       <section className={styles.section}>
         <section className={styles.grid}>
