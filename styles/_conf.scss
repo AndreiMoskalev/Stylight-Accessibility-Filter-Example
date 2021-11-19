@@ -8,6 +8,70 @@
 
 $MAIN_COLOR: #000000;
 
+// fonts
+$font-family-sans-serif: "Helvetica Neue";
+$font-family-dala-floda: "DalaFloda";
+$font-stack-sans-serif: $font-family-sans-serif, "Helvetica", sans-serif;
+$font-stack-dala-floda: $font-family-dala-floda, serif;
+
+$fontSizeBase: 14px;
+$fontLineHeightBase: 18px;
+
+// styles
+$boxShadow: 0 0 10px 0 rgba(0,0,0,.05);
+$boxShadowHover: 0 0 10px 0 rgba(0,0,0,.1);
+$borderRadius: 3px;
+
+// Z-index
+$z-navigation-mobile-header: 1000;
+$search-disclaimer-z-index: 1000;
+
+$product-feed-small-mobile-size: 110px;
+$product-feed-medium-mobile-size: 130px;
+$product-feed-ratio: 0.63;
+
+// Brand book of colors
+
+$color-teal: #29ceb5;
+$color-teal-light: #adfff4;
+
+$color-purple: #8057c1;
+$color-purple-light: #cd92ef;
+$color-purple-fashion: #c376ef;
+
+$color-darker-grey: #231f20;
+$color-dark-grey: #333;
+$color-grey-80: #767676;
+$color-grey-70: #a1a1a1;
+$color-grey: #bfbfbf;
+$color-grey-light: #e8e8e8;
+$color-grey-lighter: #f9f9f9;
+$color-grey-lightest: #f1f1f1;
+$color-grey-product: #f5f5f5;
+
+$color-link-pink: #f98484;
+$color-pink: #f49d9d;
+$color-pink-light: #ffc8bc;
+
+$color-mint: #008799;
+$color-mint-light: #e1fffb;
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-red: #de2636;
+$color-new-pink: #FD544A;
+$color-rose: #ffb9ab;
+
+$color-gold: #dba522;
+
+$color-facebook-blue: #3b5998;
+$color-google-blue: #4285f4;
+$color-whatsapp-green: #4DC247;
+$color-twitter-blue: #01a9f2;
+$color-pinterest-red: #cb2027;
+
+
 
 /*
 |--------------------------------------------------------------------------

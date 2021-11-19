@@ -5,5 +5,8 @@ module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'src', 'styles')],
     prependData: `@import "_conf.scss";`
-  }
+  },
+  images: {
+    domains: ['images.stylight.net'],
+  },
 }

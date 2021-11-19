@@ -12,3 +12,10 @@
   width: 100%;
   padding: $GUTTER*2 $GUTTER/2 $GUTTER $GUTTER/2;
 }
+
+.grid {
+  display: grid;
+  grid-gap: 16px;
+  margin-top: 16px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
