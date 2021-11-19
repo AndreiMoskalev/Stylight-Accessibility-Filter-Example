@@ -1,0 +1,34 @@
+.checkbox-control {
+  display: grid;
+
+  &__input {
+    visibility: hidden;
+    grid-area: 1/1/1/2;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+
+    &:checked + .checkbox-control__label::before {
+      background: icon-checked(#fff) #000;
+    }
+  }
+
+  &__label {
+    grid-area: 1/1/1/2;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  &__label:before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #a1a1a1;
+    border-radius: 3px;
+    margin-right: 8px;
+  }
+}

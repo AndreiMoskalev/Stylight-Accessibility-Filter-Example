@@ -1,0 +1,48 @@
+@use "sass:math";
+
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+    str-replace(str-slice($string, $index +
+    str-length($search)), $search, $replace);
+  }
+  @return $string;
+}
+
+
+//  Function to create an optimized svg url
+@function svg-url($svg){
+  // Chunk up string in order to avoid "SystemStackError: stack level too deep"
+  $encoded:'';
+  $slice: 2000;
+  $index: 0;
+  $loops: math.ceil(str-length($svg)/$slice);
+  @for $i from 1 through $loops {
+    $chunk: str-slice($svg, $index, $index + $slice - 1);
+    $chunk: str-replace($chunk,'"','\'');
+    $chunk: str-replace($chunk,'<','%3C');
+    $chunk: str-replace($chunk,'>','%3E');
+    $chunk: str-replace($chunk,'&','%26');
+    $chunk: str-replace($chunk,'#','%23');
+    $encoded: #{$encoded}#{$chunk};
+    $index: $index + $slice;
+  }
+  @return url("data:image/svg+xml;charset=utf8,#{$encoded}");
+}
+
+@function icon-toggle($fill: $color-black, $stroke: ""){
+  @return svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><path fill="#{$fill}" stroke="#{$stroke}" d="m2.77 15.3 2.82-2.83L25 31.88l19.41-19.41 2.82 2.83L25 37.53 2.77 15.3z"></path></svg>');
+}
+
+@function icon-checked($fill: $color-black, $stroke:""){
+  @return svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"> <path fill="#{$fill}" stroke="#{$stroke}"  d="m1.76 24.82 2.9-2.9 13.68 13.69 27-27 2.9 2.89-29.9 29.89L1.76 24.82z"/></svg>');
+}
+
+@function icon-search($fill: $color-black, $stroke:"") {
+  @return svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><path fill="#{$fill}" stroke="#{$stroke}" d="M37.34 34.69a19.75 19.75 0 1 0-2.86 2.8l10.93 10.86 2.82-2.84zM5.71 22.11A16.49 16.49 0 1 1 22.2 38.58 16.51 16.51 0 0 1 5.71 22.11z" /></svg>');
+}
+
+@function icon-close($fill: $color-black, $stroke:"") {
+  @return svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"> <path fill="#{$fill}" stroke="#{$stroke}" d="M27.3 25 45 42.7 42.7 45 25 27.3 7.3 45 5 42.7 22.7 25 5 7.3 7.3 5 25 22.7 42.7 5 45 7.3z"/></svg>');
+}

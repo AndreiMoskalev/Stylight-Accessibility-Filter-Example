@@ -1,0 +1,59 @@
+.filter-price {
+  display: flex;
+  flex-direction: column;
+
+  &__inputs-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  &__input-wrapper {
+    flex-basis: 48%;
+    display: grid;
+    height: 38px;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+
+    &:after {
+      content: attr(data-currency);
+      grid-area: 1/-1/1/1;
+      margin-left: 8px;
+      width: 10px;
+    }
+  }
+
+  &__input {
+    grid-area: 1/1/2/2;
+    border: 1px solid #bfbfbf;
+    border-radius: 3px;
+    text-align: right;
+    height: 100%;
+    width: 100%;
+    padding-right: 16px;
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  &__apply {
+    margin-bottom: 38px;
+  }
+
+  &__slider-container {
+    margin: 10px 0 17px;
+  }
+
+  &__slider {
+    margin: 8px 0 17px;
+  }
+
+  &__checkbox {
+    margin-bottom: 8px;
+  }
+}
