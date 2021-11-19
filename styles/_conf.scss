@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+/*
+|--------------------------------------------------------------------------
+| APP color schema
+|--------------------------------------------------------------------------
+*/
+
+$MAIN_COLOR: #000000;
+
+
+/*
+|--------------------------------------------------------------------------
+| BREAKPOINTS
+|--------------------------------------------------------------------------
+*/
+
+// Usage example:  @media #{$BREAKPOINT-DESK}
+
+$BREAKPOINT-DESK: "only screen and (min-width: 1280px)";
+$BREAKPOINT-TABLET-LAND: "only screen and (min-width: 975px)";
+$BREAKPOINT-TABLET: "only screen and (min-width: 600px)";
+$BREAKPOINT-MOBILE-LAND: "only screen and (min-width: 480px)";
+
+/*
+|--------------------------------------------------------------------------
+| SPACING
+|--------------------------------------------------------------------------
+*/
+
+
+$GUTTER: 32px;
