@@ -1,0 +1,44 @@
+.filter-search {
+  display: grid;
+  grid-template-columns: auto 10px;
+  height: 40px;
+  margin-bottom: 15px;
+  justify-items: end;
+  align-items: center;
+
+  &__input {
+    grid-area: 1/1/1/3;
+    background: 10px center icon-search() no-repeat;
+    border: 1px solid $color-grey;
+    background-size: 15px;
+    border-radius: 3px;
+    align-self: center;
+    content: "";
+    width: 100%;
+    height: 100%;
+    padding: 0 35px;
+  }
+
+  &__clear-button {
+    display: none;
+    grid-area: 1/1/-1/-1;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    background: icon-close() transparent no-repeat;
+  }
+
+  &--not-empty {
+    .filter-search__clear-button {
+      display: block;
+    }
+  }
+
+  &__input {
+    padding-right: 10px;
+  }
+
+  &__clear-button {
+    display: none;
+  }
+}

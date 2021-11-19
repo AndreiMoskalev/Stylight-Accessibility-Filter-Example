@@ -3,9 +3,10 @@ import Image from 'next/image';
 import { HeartOffIcon } from '../icons';
 
 // eslint-disable-next-line react/prop-types
-const Catalog = ({ name, brand, src, meta, price }) => {
+let index = 0
+const Catalog = ({ name, brand, src, meta, price, tabindex }) => {
     return (
-        <div className='product-preview' key={name}>
+        <button tabIndex={tabindex} className='product-preview' key={name}>
             <div className='product-preview__cta-wrapper '>
                 <Image
                     className='product-preview__image'
@@ -13,9 +14,9 @@ const Catalog = ({ name, brand, src, meta, price }) => {
                     alt={`${brand} ${name}`}
                     layout='fill'
                 />
-                <button className='product-preview__like-btnt '>
+                <div className='product-preview__like-btnt '>
                     <HeartOffIcon className='product-preview__like-btn__icon-heart' />
-                </button>
+                </div>
             </div>
             <div className='product-preview__info-wrapper'>
                 <p className='product-preview__brand'>{brand}</p>
@@ -27,7 +28,7 @@ const Catalog = ({ name, brand, src, meta, price }) => {
                     <span className='product-preview__price'>{price}</span>
                 </p>
             </div>
-        </div>
+        </button>
     );
 }
 

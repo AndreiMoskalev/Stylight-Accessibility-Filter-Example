@@ -1,3 +1,7 @@
+.multi-range-slider__thumb--focused{
+  box-shadow: 0 0 3px #00F !important;
+}
+
 .multi-range-slider {
   padding: 15px 0;
   position: relative;
@@ -99,5 +103,6 @@
   background: red;
   width: 40px;
   height: 40px;
+  box-shadow: 0 0 3px #00F;
 }
 

@@ -33,12 +33,12 @@ const FilterPrice = ({minValue, maxValue, minRange, maxRange, onChange}) => {
         <div className="filter-price">
             <div className="filter-price__inputs-container">
                 <div className="filter-price__input-wrapper" data-currency="$">
-                    <input id="filter-price_input-min" type="number" className="filter-price__input"
+                    <input id="filter-price_input-min" type="number" className="filter-price__input" aria-label={'Min price'}
                            value={min} onChange={onInputMinChange}/>
                 </div>
 
                 <div className="filter-price__input-wrapper" data-currency="$">
-                    <input id="filter-price_input-max" type="number" className="filter-price__input"
+                    <input id="filter-price_input-max" type="number" className="filter-price__input" aria-label={'Max price'}
                            value={max} onChange={onInputMaxChange}/>
                 </div>
             </div>
